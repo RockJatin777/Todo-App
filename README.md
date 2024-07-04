@@ -52,10 +52,10 @@ Code spllit in two component
 
 ### Advanced Configuration
 User can :
- > add a todo task
- > Delete a specific todo task
- > Update a specific Todo task
- > Marked as Completed the todo task without deleting it 
+ > add a todo task,
+ > Delete a specific todo task,
+ > Update a specific Todo task,
+ > Marked as Completed the todo task without deleting it.
 
 ### Deployment
 
