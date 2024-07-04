@@ -32,7 +32,14 @@
   border-radius: 3px;
   padding: 6px;
   width: 250px;
-  margin-bottom: 16px;
+  margin-bottom: 2px;
+}
+
+.err-msg{
+  color: darkblue;
+  margin-top: 0px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .add-todo-button{
@@ -41,6 +48,7 @@
   color: #ffffff;
   height: 28px;
   width: 80px;
+  margin-top: 24px;
   border-radius: 6px;
 }
 

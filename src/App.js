@@ -27,6 +27,8 @@ function App() {
   // maintaining state for task by user input and marked as completed the task without deleting
   const [userInput, setUserInput] = useState('')
   const [isTaskCompleted, setIsTaskCompleted] = useState(true)
+  // maintaining error massege when user add empty task 
+  const [errmsg, setErrMsg] = useState('')
 
   // storing user input in state using hooks setter function
   const onUserInput = event => {
@@ -35,11 +37,17 @@ function App() {
 
   // adding todo task to the todo list and updating in local storage
   const onAddTask = () => {
-    const newTask = {id: uuidv4(), name: userInput, isCompleted: false}
-    const newTaskList = [...tasks, newTask]
-    setTasks(newTaskList)
-    localStorage.setItem('tasks', JSON.stringify(newTaskList))
-    setUserInput('')
+    if(userInput === ''){
+      setErrMsg("*Please enter name to add task")
+    } else{
+      const newTask = {id: uuidv4(), name: userInput, isCompleted: false}
+      const newTaskList = [...tasks, newTask]
+      setTasks(newTaskList)
+      localStorage.setItem('tasks', JSON.stringify(newTaskList))
+      setUserInput('')
+      setErrMsg('')
+    }
+    
   }
 
   // marking todo task as completed also upading local storage
@@ -74,6 +82,7 @@ function App() {
       <h1 className="app-title">Welcome to the Todos App</h1>
       <section className="user-input-container">
         <input className="user-input" type="text" placeholder="Task Name" onChange={onUserInput} value={userInput} />
+        <p className="err-msg">{errmsg}</p>
         <button type="button" className="add-todo-button" onClick={onAddTask}>Add Task</button>
       </section>
       <h2 className="todo-list-title">My Todos</h2>
