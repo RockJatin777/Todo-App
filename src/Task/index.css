@@ -1,0 +1,66 @@
+.todo-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.checkbox {
+    height: 24px;
+    width: 24px;
+    margin-right: 16px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    background-color: aliceblue;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 12px;
+    border-left: 10px solid #20288e;
+}
+
+.task-name {
+    text-decoration: line-through;
+}
+
+.update-button {
+    background-color: transparent;
+    border: none;
+}
+
+
+.popup-container{
+    background-color: #c8d2dc;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    border-radius: 12px;
+}
+
+.user-input {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #20288e;
+    border-radius: 3px;
+    padding: 6px;
+    width: 250px;
+    margin-bottom: 16px;
+}
+
+.popup-button{
+    color: #e8e8e8;
+    background-color: #2ac64c;
+    border: none;
+    margin-right: 16px;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+}
+
