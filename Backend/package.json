@@ -5,7 +5,7 @@
   "scripts": {
     "preinstall": "chmod -R 777 ./node_modules",
     "start": "node index.js",
-    "postinstall": "npm rebuild bcrypt sqlite3"
+    "postinstall": "npm rebuild bcryptjs sqlite3"
   },
   "keywords": [],
   "author": "",
