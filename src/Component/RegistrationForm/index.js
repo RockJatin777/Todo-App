@@ -87,7 +87,7 @@ const RegisterPage = () => {
                     },
                     body: JSON.stringify(userDetails),
                 };
-                const response = await fetch('http://localhost:3001/register', options);
+                const response = await fetch('https://todo-app-xxko.onrender.com/register', options);
                 const data = await response.json();
                 const jwtToken = data.jwtToken;
                 Cookies.set('jwt_token', jwtToken, {

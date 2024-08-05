@@ -73,7 +73,7 @@ const LoginPage = () => {
             },
             body: JSON.stringify(userDetails),
         };
-        const response = await fetch('http://localhost:3001/login', options);
+        const response = await fetch('https://todo-app-xxko.onrender.com/login', options);
         const data = await response.json();
         if (response.ok === true) {
             const jwtToken = data.jwtToken;
