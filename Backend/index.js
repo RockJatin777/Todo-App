@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 // importing cors to communicate frontend to backend
 const cors = require("cors");
 // importing bcrypt to encrypt or decrypt password
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 // importing jwt token to identify the user
 const jwt = require("jsonwebtoken");
 
@@ -85,7 +85,7 @@ app.post("/register", async (request, response) => {
                     } else {
                         const payload = {username: username};
                         const jwtToken = jwt.sign(payload, "Token");
-                        res.send({jwtToken});
+                        response.send({jwtToken});
                     }
                 });
             } else {
