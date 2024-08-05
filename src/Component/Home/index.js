@@ -38,7 +38,7 @@ const Home = () => {
             }
         };
 
-        const response = await fetch('http://localhost:3001/todos', options);
+        const response = await fetch('https://todo-app-xxko.onrender.com/todos', options);
         const data = await response.json();
         setTasks(data);
     }, [jwtToken]);
@@ -71,7 +71,7 @@ const Home = () => {
                 },
                 body: JSON.stringify(taskDetails),
             };
-            const response = await fetch('http://localhost:3001/todos', options);
+            const response = await fetch('https://todo-app-xxko.onrender.com/todos', options);
             const result = await response.json();
             console.log(result);
             setUserInput('');
@@ -97,7 +97,7 @@ const Home = () => {
             },
             body: JSON.stringify({ isComplete: isTaskCompleted }),
         };
-        await fetch(`http://localhost:3001/todo/${id}`, options);
+        await fetch(`https://todo-app-xxko.onrender.com/todo/${id}`, options);
         getData();
     }
 
@@ -109,7 +109,7 @@ const Home = () => {
                 Authorization: `Bearer ${jwtToken}`,
             }
         };
-        await fetch(`http://localhost:3001/todos/${id}`, options);
+        await fetch(`https://todo-app-xxko.onrender.com/todos/${id}`, options);
         getData();
     }
 
@@ -123,7 +123,7 @@ const Home = () => {
             },
             body: JSON.stringify({ taskName: updateName }),
         };
-        await fetch(`http://localhost:3001/todos/${id}`, options);
+        await fetch(`https://todo-app-xxko.onrender.com/todos/${id}`, options);
         getData();
         window.location.reload();
     }
