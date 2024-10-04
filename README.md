@@ -76,4 +76,4 @@ react-icons for icons
 Frontend Project is deployed on vercel
 Backend Project is deployed on Render
 
-You can learn more in the https://todo-app-murex-mu.vercel.app/
+You can learn more in the [https://todo-app-murex-mu.vercel.app/](https://profound-smakager-be237d.netlify.app/)
